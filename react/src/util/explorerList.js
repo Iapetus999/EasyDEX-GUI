@@ -27,6 +27,7 @@ const explorerList = {
   BEER: 'http://beer.komodochainz.info',
   NINJA: 'https://explorer.fund.ninja',
   VOTE2018: 'http://88.99.226.252',
+  KV: 'http://kv.explorer.supernet.org',
   QTUM: 'https://explorer.qtum.org',
   DNR: 'http://denarius.name',
   LTC: 'https://live.blockcypher.com/ltc',

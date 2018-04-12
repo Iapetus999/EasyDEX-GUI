@@ -54,6 +54,26 @@ export const _SendFormRender = function() {
       }
       <div className="row">
         <div className="col-xlg-12 form-group form-material">
+          { this.props.ActiveCoin.coin === 'KV' &&
+            this.props.ActiveCoin.mode === 'native' &&
+            <span className="pointer">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={ this.state.kvSend } />
+                <div
+                  className="slider"
+                  onClick={ () => this.toggleKVSend() }></div>
+              </label>
+              <div
+                className="toggle-label"
+                onClick={ () => this.toggleKVSend() }>
+                  send as a regular transaction
+              </div>
+            </span>
+          }
+        </div>
+        <div className="col-xlg-12 form-group form-material">
           { this.props.ActiveCoin.mode === 'spv' &&
             <button
               type="button"

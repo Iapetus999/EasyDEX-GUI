@@ -62,6 +62,7 @@ class SendCoin extends React.Component {
       btcFeesSize: 0,
       btcFeesTimeBasedStep: 1,
       spvPreflightRes: null,
+      kvSend: false,
     };
     this.defaultState = JSON.parse(JSON.stringify(this.state));
     this.updateInput = this.updateInput.bind(this);
@@ -80,6 +81,13 @@ class SendCoin extends React.Component {
     this.fetchBTCFees = this.fetchBTCFees.bind(this);
     this.onSliderChange = this.onSliderChange.bind(this);
     this.onSliderChangeTime = this.onSliderChangeTime.bind(this);
+    this.toggleKVSend = this.toggleKVSend.bind(this);
+  }
+
+  toggleKVSend() {
+    this.setState({
+      kvSend: !this.state.kvSend,
+    });
   }
 
   setSendAmountAll() {
@@ -706,7 +714,7 @@ class SendCoin extends React.Component {
       const _confTime = [
         'within less than 30 min',
         'within 30 min',
-        'within 60 min',
+        'within 60 min'
       ];
       const _minTimeBased = 0;
       const _maxTimeBased = 3;

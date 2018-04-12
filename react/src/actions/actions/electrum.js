@@ -200,7 +200,7 @@ export const shepherdElectrumTransactions = (coin, address) => {
     };
     return fetch(
       `http://127.0.0.1:${Config.agamaPort}/shepherd/electrum/listtransactions${urlParams(_urlParams)}`,
-      fetchType.get  
+      fetchType.get
     )
     .catch((error) => {
       console.log(error);
@@ -271,6 +271,7 @@ export const shepherdElectrumCoinsState = (json) => {
 // value in sats
 export const shepherdElectrumSend = (coin, value, sendToAddress, changeAddress, btcFee) => {
   value = Math.floor(value);
+  // const opreturn = 'The Komodo project focuses on empowering users with Freedom through blockchain technology.\nThere are many forms of Freedom that Komodo can provide, and we are currently focusing on empowering two types of users: the blockchain entrepreneur, and the average cryptocurrency investor. Together, our community of entrepreneurs, investors, and other users form an economic ecosystem.';
 
   return dispatch => {
     const _urlParams = {
@@ -282,6 +283,7 @@ export const shepherdElectrumSend = (coin, value, sendToAddress, changeAddress, 
       gui: true,
       push: true,
       verify: true,
+      // opreturn,
     };
     return fetch(
       `http://127.0.0.1:${Config.agamaPort}/shepherd/electrum/createrawtx${urlParams(_urlParams)}${btcFee ? '&btcfee=' + btcFee : ''}`,
@@ -320,7 +322,7 @@ export const shepherdElectrumSendPromise = (coin, value, sendToAddress, changeAd
     };
     return fetch(
       `http://127.0.0.1:${Config.agamaPort}/shepherd/electrum/createrawtx${urlParams(_urlParams)}${btcFee ? '&btcfee=' + btcFee : ''}`,
-      fetchType.get  
+      fetchType.get
     )
     .catch((error) => {
       console.log(error);
@@ -352,7 +354,7 @@ export const shepherdElectrumSendPreflight = (coin, value, sendToAddress, change
       gui: true,
       verify: true,
       push: false,
-    };  
+    };
     fetch(
       `http://127.0.0.1:${Config.agamaPort}/shepherd/electrum/createrawtx${urlParams(_urlParams)}${btcFee ? '&btcfee=' + btcFee : ''}`,
       fetchType.get
