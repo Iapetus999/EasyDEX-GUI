@@ -4,7 +4,7 @@ import QRModal from '../qrModal/qrModal';
 import InvoiceModal from '../invoiceModal/invoiceModal';
 import ReactTooltip from 'react-tooltip';
 
-export const AddressActionsNonBasiliskModeRender = function(address, type) {
+export const AddressActionsRender = function(address, type) {
   return (
     <td>
       <span className={ 'label label-' + (type === 'public' ? 'default' : 'dark') }>
@@ -170,7 +170,7 @@ export const ReceiveCoinRender = function() {
     );
   } else {
     return (
-      <div>
+      <div className="receive-coin">
         <div className="col-xs-12 margin-top-20">
           <div className="panel nav-tabs-horizontal">
             <div>
@@ -205,7 +205,40 @@ export const ReceiveCoinRender = function() {
                     <h4 className="panel-title">{ translate('INDEX.RECEIVING_ADDRESS') }</h4>
                   </header>
                   <div className="panel-body">
-                  { this.ReceiveCoinTableRender() }
+                    { this.ReceiveCoinTableRender() }
+                    { this.props.mode === 'native' &&
+                      <div className="margin-top-20">
+                        <span
+                          onClick={ this.openExportDropMenu }
+                          className="receive-coin-export pointer">
+                          <i className="icon fa-download margin-right-5"></i> Export
+                        </span>
+                        <div className={ 'dropdown' + (this.state.openExportDropMenu ? ' open' : '') }>
+                          <ul className="dropdown-menu dropdown-menu-right">
+                            <li>
+                              <a onClick={ () => this.getNewAddress('public') }>
+                                Export pub keys
+                              </a>
+                            </li>
+                            <li>
+                              <a onClick={ () => this.getNewAddress('private') }>
+                                Export priv keys
+                              </a>
+                            </li>
+                            <li>
+                              <a onClick={ () => this.getNewAddress('private') }>
+                                Export pub and priv keys
+                              </a>
+                            </li>
+                            <li>
+                              <a onClick={ () => this.getNewAddress('private') }>
+                                Export in CSV
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    }
                   </div>
                 </div>
               </div>

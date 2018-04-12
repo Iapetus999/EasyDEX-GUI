@@ -10,7 +10,7 @@ import {
 } from '../../../actions/actionCreators';
 import Store from '../../../store';
 import {
-  AddressActionsNonBasiliskModeRender,
+  AddressActionsRender,
   AddressItemRender,
   ReceiveCoinRender,
   _ReceiveCoinTableRender,
@@ -24,11 +24,13 @@ class ReceiveCoin extends React.Component {
     super();
     this.state = {
       openDropMenu: false,
+      openExportDropMenu: false,
       hideZeroAdresses: false,
       toggledAddressMenu: null,
       toggleIsMine: false,
     };
     this.openDropMenu = this.openDropMenu.bind(this);
+    this.openExportDropMenu = this.openExportDropMenu.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleVisibleAddress = this.toggleVisibleAddress.bind(this);
     this.checkTotalBalance = this.checkTotalBalance.bind(this);
@@ -120,13 +122,19 @@ class ReceiveCoin extends React.Component {
     }));
   }
 
+  openExportDropMenu() {
+    this.setState(Object.assign({}, this.state, {
+      openExportDropMenu: !this.state.openExportDropMenu,
+    }));
+  }
+
   _copyCoinAddress(address) {
     this.toggleAddressMenu(address);
     Store.dispatch(copyCoinAddress(address));
   }
 
   renderAddressActions(address, type) {
-    return AddressActionsNonBasiliskModeRender.call(this, address, type);
+    return AddressActionsRender.call(this, address, type);
   }
 
   hasNoAmount(address) {
@@ -183,8 +191,8 @@ class ReceiveCoin extends React.Component {
           }
 
           if (!this.state.toggleIsMine &&
-            !address.canspend &&
-            address.address.substring(0, 2) !== 'zc') {
+              !address.canspend &&
+              address.address.substring(0, 2) !== 'zc') {
             items.pop();
           }
         } else {
@@ -193,8 +201,8 @@ class ReceiveCoin extends React.Component {
           );
 
           if (!this.state.toggleIsMine &&
-            !address.canspend &&
-            address.address.substring(0, 2) !== 'zc') {
+              !address.canspend &&
+              address.address.substring(0, 2) !== 'zc') {
             items.pop();
           }
         }
@@ -202,7 +210,8 @@ class ReceiveCoin extends React.Component {
 
       return items;
     } else {
-      if (this.props.electrumCoins && this.props.mode === 'spv' &&
+      if (this.props.electrumCoins &&
+          this.props.mode === 'spv' &&
           type === 'public') {
         let items = [];
 
@@ -211,7 +220,7 @@ class ReceiveCoin extends React.Component {
             this,
             {
               address: this.props.electrumCoins[this.props.coin].pub,
-              amount: this.props.balance.balance
+              amount: this.props.balance.balance,
             },
             'public'
           )
