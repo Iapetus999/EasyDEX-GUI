@@ -22,6 +22,8 @@ const addCoinOptionsAC = () => {
     'axo',
     'etomic',
     'btch',
+    'vers',
+    'verstest',
     'beer',
     'pizza',
     'vote2018',

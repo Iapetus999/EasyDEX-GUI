@@ -19,6 +19,8 @@ const explorerList = {
   COQUI: 'https://explorer.coqui.cash',
   MNZ: 'https://www.mnzexplorer.com',
   BTCH: 'http://www.btch.host',
+  VERS: 'http://www.verus.org', // TODO: Get actual URL here
+  VERSTEST: 'http://www.verus.org', // TODO: Get actual URL here
   BTC: 'https://blockchain.info',
   HUSH: 'https://explorer.myhush.org',
   PIZZA: 'http://pizza.komodochainz.info',

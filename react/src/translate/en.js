@@ -845,6 +845,8 @@ export const LANG_EN = {
     'AXO': 'AXO (AXO)',
     'ETOMIC': 'ETOMIC (ETOMIC)',
     'BTCH': 'BTCH (BTCH)',
+    'VERS': 'VERS (VERS)',
+    'VERUSTEST': 'VERUSTEST (Test coin)',
     'BEER': 'BEER (Test coin)',
     'PIZZA': 'PIZZA (Test coin)',
     'VOTE2018': 'VOTE2018 (Notary Elections)',
