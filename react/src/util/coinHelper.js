@@ -288,6 +288,14 @@ export function getCoinTitle(coin) {
       coinlogo = 'BTCH';
       coinname = 'BTCH';
       break;
+    case 'VERS':
+      coinlogo = 'VERUS';
+      coinname = 'VERUS';
+      break;
+    case 'VERSTEST':
+      coinlogo = 'VERUS';
+      coinname = 'VERUSTEST';
+      break;
     case 'USD':
       titleBG = true;
       transparentBG = true;
@@ -540,7 +548,9 @@ export function coindList() {
     'WLC',
     'AXO',
     'ETOMIC',
-    'BTCH'
+    'BTCH',
+    'VERS',
+    'VERS'
   ];
 
   return _coins;
@@ -569,7 +579,9 @@ export const isKomodoCoin = (coin) => {
       coin === 'KMD' ||
       coin === 'AXO' ||
       coin === 'ETOMIC' ||
-      coin === 'BTCH') {
+      coin === 'BTCH'||
+      coin === 'VERS'||  // TODO: Figure out if VERUSTEST shou;d be on this list
+      coin === 'VERSTEST') {
     return true;
   }
 }

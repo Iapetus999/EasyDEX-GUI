@@ -182,6 +182,8 @@ export function shepherdHerd(coin, mode, path, startupParams) {
     };
   }
 
+  // TODO: Add node for Verus?
+
   if (startupParams) {
     herdData['ac_custom_param'] = startupParams.type;
 

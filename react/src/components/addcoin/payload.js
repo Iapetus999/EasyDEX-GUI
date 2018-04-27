@@ -24,6 +24,8 @@ export function checkAC(coinVal) {
 			coinVal === 'AXO' ||
 			coinVal === 'ETOMIC' ||
 			coinVal === 'BTCH' ||
+			coinVal === 'VERS' ||
+			coinVal === 'VERSTEST' ||
 			coinVal === 'BEER' ||
 			coinVal === 'PIZZA' ||
 			coinVal === 'VOTE2018')	{
@@ -105,6 +107,12 @@ export function startAssetChain(confpath, coin, mode, getSuppyOnly) {
 		},
 		BTCH: {
 			supply: 20998641,
+		},
+		VERS: {
+			supply: 2048000, // TODO: Get Verus supply value
+		},
+		VERSTEST: {
+			supply: 2048000, // TODO: Get VerusTest supply value
 		},
 		BEER: {
 			supply: 100000000,
