@@ -846,7 +846,7 @@ export const LANG_EN = {
     'ETOMIC': 'ETOMIC (ETOMIC)',
     'BTCH': 'BTCH (BTCH)',
     'VERS': 'VERS (VERS)',
-    'VERSTEST': 'VerusTest (VERSTEST)'
+    'VERSTEST': 'VerusTest (VERSTEST)',
     'BEER': 'BEER (Test coin)',
     'PIZZA': 'PIZZA (Test coin)',
     'VOTE2018': 'VOTE2018 (Notary Elections)',
