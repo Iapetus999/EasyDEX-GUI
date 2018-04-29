@@ -550,7 +550,7 @@ export function coindList() {
     'ETOMIC',
     'BTCH',
     'VERS',
-    'VERS'
+    'VERSTEST'
   ];
 
   return _coins;
@@ -580,7 +580,7 @@ export const isKomodoCoin = (coin) => {
       coin === 'AXO' ||
       coin === 'ETOMIC' ||
       coin === 'BTCH'||
-      coin === 'VERS'||  // TODO: Figure out if VERUSTEST shou;d be on this list
+      coin === 'VERS'||
       coin === 'VERSTEST') {
     return true;
   }
