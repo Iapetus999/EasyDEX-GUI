@@ -109,10 +109,10 @@ export function startAssetChain(confpath, coin, mode, getSuppyOnly) {
 			supply: 20998641,
 		},
 		VERS: {
-			supply: 2048000, // TODO: Get Verus supply value
+			supply: 2000000, // TODO: Get Verus supply value
 		},
 		VERSTEST: {
-			supply: 2048000, // TODO: Get VerusTest supply value
+			supply: 2000000, // TODO: Get VerusTest supply value
 		},
 		BEER: {
 			supply: 100000000,
