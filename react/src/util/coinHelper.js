@@ -46,6 +46,10 @@ export function getCoinTitle(coin) {
       coinlogo = 'pizza';
       coinname = 'PIZZA (Test coin)';
       break;
+    case 'OOT':
+      coinlogo = 'oot';
+      coinname = 'Utrum';
+      break;
     case 'XMY':
       coinlogo = 'xmy';
       coinname = 'Myriad';
@@ -57,6 +61,10 @@ export function getCoinTitle(coin) {
     case 'HUSH':
       coinlogo = 'hush';
       coinname = 'Hush';
+      break;
+    case 'SNG':
+      coinlogo = 'snowgem';
+      coinname = 'SnowGem';
       break;
     case 'BCH':
       coinlogo = 'bch';
@@ -542,7 +550,7 @@ export function coindList() {
     'ETOMIC',
     'BTCH',
     'VERS',
-    'VERS'
+    'VERSTEST'
   ];
 
   return _coins;
@@ -572,7 +580,7 @@ export const isKomodoCoin = (coin) => {
       coin === 'AXO' ||
       coin === 'ETOMIC' ||
       coin === 'BTCH'||
-      coin === 'VERS'||  // TODO: Figure out if VERUSTEST shou;d be on this list
+      coin === 'VERS'||
       coin === 'VERSTEST') {
     return true;
   }

@@ -2,6 +2,7 @@
 
 const explorerList = {
   KMD: 'http://www.kmdexplorer.ru',
+  OOT: 'http://explorer.utrum.io',
   MSHARK: 'http://MSHARK.explorer.supernet.org',
   REVS: 'http://revs.explorer.supernet.org',
   SUPERNET: 'http://SUPERNET.explorer.supernet.org',
@@ -41,6 +42,7 @@ const explorerList = {
   BTG: 'https://btgexplorer.com',
   BCH: 'https://bitcoincash.blockexplorer.com',
   ZCL: 'http://explorer.zclmine.pro',
+  SNG: 'https://explorer.snowgem.org/',
   ZMY: 'https://myriadexplorer.com',
   BTX: 'http://explorer.bitcore.cc',
   BTCZ: 'https://explorer.bitcoinz.site',
