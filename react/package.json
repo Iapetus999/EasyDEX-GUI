@@ -17,8 +17,12 @@
     "e2e": "protractor",
     "e2e-live": "protractor --elementExplorer"
   },
-  "repository": "https://github.com/KomodoPlatform/EasyDEX-GUI",
-  "homepage": "http://supernet.org",
+  "homepage": "https://github.com/KomodoPlatform/EasyDEX-GUI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KomodoPlatform/EasyDEX-GUI.git"
+  },
+
   "keywords": [
     "agama",
     "SuperNET",
